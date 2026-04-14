@@ -16,7 +16,7 @@ const Banner = () => {
                         <p className="text-[#68788e]"> Your personal shelf of meaningful connections. Browse, tend, and nurture the
                             <br />relationships that matter most.</p>
 
-                        <button class="btn bg-[#244d3f] text-white"><IoIosAdd className="text-2xl" />Add a Friend</button>
+                        <button className="btn bg-[#244d3f] text-white"><IoIosAdd className="text-2xl" />Add a Friend</button>
 
 
                     </div>
