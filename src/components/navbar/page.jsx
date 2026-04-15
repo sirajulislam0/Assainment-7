@@ -10,9 +10,7 @@ import { RiHome2Line } from "react-icons/ri";
 const NavBar = () => {
 
     const pathname = usePathname()
-    console.log(pathname, "clicked");
-
-
+    
 
     const links = <>
 

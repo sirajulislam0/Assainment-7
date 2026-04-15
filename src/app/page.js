@@ -1,7 +1,8 @@
 import Footer from "@/components/Footer/Footer";
-import Friends from "@/components/Friends/Friends";
+
 import Banner from "@/components/homepage/Banner";
 import { Suspense } from "react";
+import FriendPage from "./friends/page";
 
 export default function Home() {
   return (
@@ -15,10 +16,11 @@ export default function Home() {
           <span className="loading loading-spinner text-error"></span>
         </div>
       }>
-        <Friends />
+     
+     <FriendPage/>
       </Suspense>
 
-      <Footer />
+     
 
     </>
   );
