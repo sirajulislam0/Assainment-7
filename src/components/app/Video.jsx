@@ -13,7 +13,7 @@ const Video = ({ friend }) => {
         );
 
         if (exists) {
-            toast.error(`${friend.name} Already added ❌`);
+            toast.error(`${friend.name} Already added `);
             return;
         }
 
@@ -25,7 +25,7 @@ const Video = ({ friend }) => {
 
         setTImeline([...timeline, newItem]);
 
-        toast.success(`${friend.name} added to Video `);
+        toast.success(`Video with ${friend.name}  `);
     };
 
 

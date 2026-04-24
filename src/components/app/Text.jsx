@@ -15,7 +15,7 @@ const Text = ({ friend }) => {
 
         if (exists) {
        
-            toast.error(`${friend.name} Already added ❌`);
+            toast.error(`${friend.name} Already added`);
 
             return;
         }
@@ -28,7 +28,7 @@ const Text = ({ friend }) => {
 
         setTImeline([...timeline, newItem]);
 
-        toast.success(`${friend.name} added to Text`);
+        toast.success(`Text with ${friend.name} `);
     };
 
 

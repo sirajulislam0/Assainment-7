@@ -6,7 +6,8 @@ const PriendsPage = async () => {
 
     const res = await fetch('http://localhost:3000/friends.json')
     const friends = await res.json()
-    console.log(friends);
+    
+    
 
     return (
         <div className='container mx-auto mb-9'>
@@ -30,10 +31,11 @@ const PriendsPage = async () => {
                                 />
                             </div>
 
+                            <p className='text-[#64748b]'>{friend.days_since_contact}d ago</p>
                             <h2 className='text-3xl font-black '>{friend.name}</h2>
 
 
-                            <div className='flex justify-baseline gap-2' >{friend.tags.map((tag,index) => <h2 key={index} className='rounded-3xl bg-[#cbfadb] px-3 text-[#295244]' >{tag}</h2>)}</div>
+                            <div className='flex justify-baseline gap-2' >{friend.tags.map((tag, index) => <h2 key={index} className='rounded-3xl bg-[#cbfadb] px-3 text-[#295244]' >{tag}</h2>)}</div>
 
 
 

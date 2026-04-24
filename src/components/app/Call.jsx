@@ -16,7 +16,7 @@ const Call = ({ friend }) => {
         );
 
         if (exists) {
-            toast.error(`${friend.name} Already added ❌`);
+            toast.error(`${friend.name} Already added `);
             return;
         }
 
@@ -28,7 +28,7 @@ const Call = ({ friend }) => {
 
         setTImeline([...timeline, newItem]);
 
-        toast.success(`${friend.name} added to Call`);
+        toast.success(` Call with ${friend.name}   `);
     };
 
 

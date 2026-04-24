@@ -20,7 +20,6 @@ const FriendDetails = async ({ params }) => {
 
     const friend = friends?.find(friend => friend.id == id)
     
-    // console.log('This is friend arrys data ' , friend);
     
 
     return (
@@ -108,7 +107,7 @@ const FriendDetails = async ({ params }) => {
 
                     </div>
 
-                    <div className=' mt-8 p-6 shadow-sm b flex justify-between  gap-2.5  '>
+                    <div className=' mt-8 p-6 shadow-sm b flex justify-between  gap-2.5 rounded-xl  '>
 
 
                         <div>
@@ -124,7 +123,7 @@ const FriendDetails = async ({ params }) => {
                     </div>
 
                     {/*   call & text & and Video  */}
-                    <div className=' mt-8 p-6 shadow-sm b flex flex-col  gap-2.5  '>
+                    <div className=' mt-8 p-6 shadow-sm b flex flex-col  gap-2.5 rounded-xl '>
 
                         <h2 className="text-xl text-[#244d3f]">Quick Check-In</h2>
 

@@ -10,7 +10,8 @@ const TimeLine = () => {
 
     const { timeline, setTImeline } = useContext(TimelineAppContext)
     const [sorting, setSorting] = useState('')
-    console.log(sorting, 'this this sorting');
+
+    
 
     const filteredTimeline = sorting
         ? timeline.filter(item => item.type === sorting)
@@ -77,7 +78,11 @@ const TimeLine = () => {
                                             dataName.type === 'Call' ? 'Called' : ''} <span className="text-gray-500 font-normal">{dataName.name}</span>
                                 </h2>
                                 <p className="text-xs text-gray-400 mt-1">
-                                    March 29, 2026
+                                    {new Date(dataName.time).toLocaleDateString('en-GB', {
+                                        day: '2-digit',
+                                        month: 'short',
+                                        year: 'numeric',
+                                    })}
                                 </p>
                             </div>
 
