@@ -10,17 +10,36 @@ const TimeLine = () => {
     const { timeline, setTImeline } = useContext(TimelineAppContext)
     const [sorting, setSorting] = useState('')
     console.log(sorting, 'this this sorting');
-  
+    
+    const filteredTimeline = sorting
+        ? timeline.filter(item => item.type === sorting)
+        : timeline;
+
+    useEffect(() => {
+        if (sorting && filteredTimeline.length === 0) {
+            toast.error('No data found');
+        }
+    }, [sorting, filteredTimeline]);
+
 
     return (
         <div className='container mx-auto my-8'>
             <h3 className='text-3xl font-bold'>Timeline </h3>
 
-        
+            <div className="dropdown dropdown-center">
+                <div tabIndex={0} role="button" className="btn m-1">Filter timeline  ⬇️</div>
+                <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                    <li onClick={() => setSorting('Call')
+
+                    }><a>Call</a></li>
+                    <li onClick={() => setSorting('Text')}><a>Text</a></li>
+                    <li onClick={() => setSorting('Video')}><a>Video</a></li>
+                </ul>
+            </div>
 
             <div >
                 {
-                    timeline.map((dataName, id) => <div key={id}>
+                    filteredTimeline.map((dataName, id) => <div key={id}>
                         <div className="border border-gray-00 my-2 rounded-lg p-4 flex items-start gap-4 bg-red-400 shadow-sm">
 
                             <div className="w-10 h-10 flex items-center justify-center">
