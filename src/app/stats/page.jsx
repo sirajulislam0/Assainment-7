@@ -1,10 +1,17 @@
-import React from 'react';
+'use client'
+import { TimelineAppContext } from '@/context/SharedDataContext';
+import React, { useContext } from 'react';
+import { Legend, Pie, PieChart, Tooltip } from 'recharts';
+
 
 const Stats = () => {
+ 
     return (
-        <div>
-            stats page
-        </div>
+
+<div>
+    this is stats
+</div>
+
     );
 };
 

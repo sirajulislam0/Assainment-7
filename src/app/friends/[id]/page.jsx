@@ -1,4 +1,9 @@
+'use client '
+import Call from "@/components/app/Call";
+import Text from "@/components/app/Text";
+import Video from "@/components/app/Video";
 import Image from "next/image";
+
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { IoMdText } from "react-icons/io";
 import { IoVideocamOutline } from "react-icons/io5";
@@ -8,26 +13,15 @@ import { RiDeleteBinLine, RiHistoryFill, RiNotificationSnoozeLine } from "react-
 
 const FriendDetails = async ({ params }) => {
 
-
-
-    // const {id}  = await params;
-    // const res = await fetch(`http://localhost:3000/friends/${id}`);
-    // const friends = await res.json();
-    // console.log("Logded");
-
-
-
-
-
     const { id } = await params
-    // const res = await fetch('http://localhost:300/friends.json')
     const res = await fetch('http://localhost:3000/friends.json')
 
     const friends = await res.json()
 
     const friend = friends?.find(friend => friend.id == id)
-
-
+    
+    // console.log('This is friend arrys data ' , friend);
+    
 
     return (
         <div className="container mx-auto gap-2 mb-9">
@@ -135,30 +129,11 @@ const FriendDetails = async ({ params }) => {
                         <h2 className="text-xl text-[#244d3f]">Quick Check-In</h2>
 
                         <div className='grid grid-cols-3 gap-6 container mx-auto '>
-                            <div className='card shadow-sm b flex justify-center items-center gap-2.5  '>
 
-
-                                <h2 className="text-3xl font-bold text-[#000000] mt-4"><BiSolidPhoneCall /></h2>
-                                <h2 className="text-xl text-[#000000] mb-4">Call</h2>
-
-
-                            </div>
-                            <div className='card shadow-sm b flex justify-center items-center gap-2.5  '>
-
-
-                                <h2 className="text-3xl font-bold text-[#000000] mt-4"><IoMdText /></h2>
-                                <h2 className="text-xl text-[#000000] mb-4">Text</h2>
-
-
-                            </div>
-                            <div className='card shadow-sm b flex justify-center items-center gap-2.5  '>
-
-
-                                <h2 className="text-3xl font-bold text-[#000000] mt-4"><IoVideocamOutline /></h2>
-                                <h2 className="text-xl text-[#000000] mb-4">Video</h2>
-
-
-                            </div>
+                         
+                         <Call friend ={friend}  />
+                         <Text friend ={friend}/>
+                         <Video friend = {friend}/>
 
 
 
