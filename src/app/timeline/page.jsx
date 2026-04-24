@@ -3,6 +3,7 @@ import { TimelineAppContext } from '@/context/SharedDataContext';
 import Image from 'next/image';
 // import Image from 'next/image';
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { IoIosArrowDown } from 'react-icons/io';
 import { toast } from 'react-toastify';
 
 const TimeLine = () => {
@@ -10,7 +11,7 @@ const TimeLine = () => {
     const { timeline, setTImeline } = useContext(TimelineAppContext)
     const [sorting, setSorting] = useState('')
     console.log(sorting, 'this this sorting');
-    
+
     const filteredTimeline = sorting
         ? timeline.filter(item => item.type === sorting)
         : timeline;
@@ -27,7 +28,7 @@ const TimeLine = () => {
             <h3 className='text-3xl font-bold'>Timeline </h3>
 
             <div className="dropdown dropdown-center">
-                <div tabIndex={0} role="button" className="btn m-1">Filter timeline  ⬇️</div>
+                <div tabIndex={0} role="button" className="btn m-1">Filter timeline  <IoIosArrowDown /></div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                     <li onClick={() => setSorting('Call')
 
@@ -40,7 +41,7 @@ const TimeLine = () => {
             <div >
                 {
                     filteredTimeline.map((dataName, id) => <div key={id}>
-                        <div className="border border-gray-00 my-2 rounded-lg p-4 flex items-start gap-4 bg-red-400 shadow-sm">
+                        <div className="border border-gray-100 my-2 rounded-lg p-4 flex items-start gap-4 mx-3 bg-white shadow-sm">
 
                             <div className="w-10 h-10 flex items-center justify-center">
 

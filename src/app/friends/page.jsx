@@ -13,7 +13,7 @@ const PriendsPage = async () => {
 
             <h2 className='font-semibold text-2xl my-4'>Your Friends</h2>
 
-            <div className='grid grid-cols-4 gap-3 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 ml-2 mr-2 '>
                 {
                     friends.map(friend => <div key={friend.id}>
 

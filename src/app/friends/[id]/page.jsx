@@ -27,7 +27,7 @@ const FriendDetails = async ({ params }) => {
         <div className="container mx-auto gap-2 mb-9">
 
 
-            <div className="flex gap-5 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
                 <div>
 
 
@@ -78,7 +78,7 @@ const FriendDetails = async ({ params }) => {
                 <div>
 
 
-                    <div className='grid grid-cols-3 gap-6 container mx-auto '>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-6 container mx-auto '>
                         <div className='card shadow-sm b flex justify-center items-center gap-2.5  '>
 
 
@@ -128,7 +128,7 @@ const FriendDetails = async ({ params }) => {
 
                         <h2 className="text-xl text-[#244d3f]">Quick Check-In</h2>
 
-                        <div className='grid grid-cols-3 gap-6 container mx-auto '>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto '>
 
                          
                          <Call friend ={friend}  />
