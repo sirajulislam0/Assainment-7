@@ -1,36 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+KeenKeeper
+KeenKeeper is a modern contact management and interaction tracking app designed to help you maintain meaningful relationships. It allows users to store contact details, track communication (Text, Call, Video), and visualize interaction patterns through analytics.
+Frontend:  Next.js
+Styling: Tailwind CSS
+State Management: Context API
+Charts: Recharts
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Interaction Tracking System: Users can log and track communications in three categories — Text, Call, and Video. This helps maintain a clear record of how and when they interact with each contact.
+Smart Timeline with Filtering: All interactions are displayed in a chronological timeline, where users can easily sort & filter (Text/Call/Video) to see specific types of activity.
+Analytics & Status Monitoring:The app provides visual insights through charts and tracks days since last contact, highlighting overdue contacts based on goals and due dates.
