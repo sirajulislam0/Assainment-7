@@ -4,7 +4,7 @@ import React from 'react';
 
 const PriendsPage = async () => {
 
-    const res = await fetch('http://localhost:3000/friends.json',{cache:"no-store"})
+    const res = await fetch('https://assainment-7-yrkf.vercel.app/friends.json',{cache:"no-store"})
     const friends = await res.json()
     
     
