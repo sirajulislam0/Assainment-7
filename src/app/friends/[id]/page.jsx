@@ -14,7 +14,7 @@ import { RiDeleteBinLine, RiHistoryFill, RiNotificationSnoozeLine } from "react-
 const FriendDetails = async ({ params }) => {
 
     const { id } = await params
-    const res = await fetch('http://localhost:3000/friends.json')
+    const res = await fetch('http://localhost:3000/friends.json',{cache:"no-store"})
 
     const friends = await res.json()
 
